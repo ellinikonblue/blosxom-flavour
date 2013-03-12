@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ja">
+<head>
+<!-- 各種メタ情報 -->
+  <meta http-equiv="Content-Type"        content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Style-Type"  content="text/css" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+  <link rel="up"  href="$url/" title="$blog_title" />
+  <?$path_info like="(^[^\.]+/?$)|(^$)|(index\.\w+$)">
+  $paging::link_first
+  $paging::link_last
+  $paging::link_prev
+  $paging::link_next
+  </?>
+  <link rel="alternate" type="application/rss+xml" title="RSS"
+    href="http://yourdomain.com/index.rss10" />
+
+  <title>$blog_title$date_title::title$categories::title$entry_title::title</title>
+
+<!-- CSS 読み込み -->
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/reset/reset-min.css">
+  <link rel="stylesheet" type="text/css"
+    href="/devlosxom/lib/css/blueblock/style.css" media="screen,tv" />
+</head>
+
+<body id="pagetop">
+<div id="wrapper">
+  <div id="header">
+    <h1><a href="$url/" title="$blog_title - Home">$blog_title</a></h1>
+    <div class="description">$blog_description</div>
+  </div> <!-- End of #header -->
+
+  <div id="main">
+    <div id="content">
+<!--
+  ***** head フレーバーここまで ****************************************
+  -->

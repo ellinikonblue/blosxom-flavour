@@ -1,0 +1,9 @@
+  <item rdf:about="$url$path/$fn.$default_flavour">
+    <title>$title</title>
+    <link>$url$path/$fn.$default_flavour</link>
+    <description>$foreshortened::body</description>
+    <dc:subject>$categories::name</dc:subject>
+    <dc:creator>$rss10::creator</dc:creator>
+    <dc:date>$yr-$mo_num-$da$rss10::T$ti:00$rss10::tz_offset</dc:date>
+    <content:encoded>$body</content:encoded>
+  </item>

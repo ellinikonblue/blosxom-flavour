@@ -1,0 +1,40 @@
+<!--
+  ***** foot フレーバーここから ****************************************
+  -->
+      <?$path_info unlike="(^[^\.]+/?$)|(^$)|(index\.\w+$)">
+        $writeback::writebacksform
+      </?>
+
+    </div> <!-- End of #content -->
+
+    <div id="nav">
+<!--
+Archives プラグイン -->
+      <h3 title="月毎・年毎に閲覧" id="archivesname">Archives</h3>
+      <div class="archives">
+        <div id="archiveslist">
+          $archives::archives
+        </div>
+      </div>
+
+<!--
+Categories プラグイン -->
+      <h3 title="カテゴリー毎に閲覧" id="categoriesname">Categories</h3>
+      <div class="categories">
+        <div id="categorieslist">
+          $categories::categories
+        </div>
+      </div>
+
+    </div> <!-- End of #nav -->
+  </div> <!-- End of #main" -->
+
+  <div id="footer">
+    <div class="right pagenav">
+      $paging::navi
+      <a href="#pagetop">▲ Back to page top</a>
+    </div>
+  </div> <!-- End of #footer -->
+</div> <!-- End of #wrap -->
+
+</body>
