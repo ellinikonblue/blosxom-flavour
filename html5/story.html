@@ -1,0 +1,24 @@
+<!--
+  ***** story フレーバーここから ****************************************
+  -->
+      <article>
+        <h2 class="title">$title</h2>
+        <p class="meta">$mo $da, $yr at
+          <a href="$url$path/$fn.$default_flavour" 
+            title="このエントリー「 $title 」への恒久的な URL">$ti</a> in
+          <a href="$url$path" 
+            title="カテゴリー「 $categories::name 」のエントリーを表示">$categories::name</a> |
+          <a href="$url$path/$fn.$default_flavour#trackbacks"
+            title="このエントリー「 $title 」へのトラックバック">トラックバック</a>
+            ($writeback::tb_count) |
+          <a href="$url$path/$fn.$default_flavour#comments"
+            title="このエントリー「 $title 」へのコメント">コメント</a>
+            ($writeback::cm_count)
+        </p>
+        <div class="paragraph">
+          $body
+        </div>
+      </article> <!-- End of article -->
+<!--
+  ***** story フレーバーここまで ****************************************
+  -->

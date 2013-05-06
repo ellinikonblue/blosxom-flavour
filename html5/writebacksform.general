@@ -1,0 +1,48 @@
+<!-- ここからが wrietbacksform.general 追加分 -->
+      <div class="writeback">
+        <a name="trackbacks"></a><h3>トラックバック</h3>
+        <p class="url">
+          <label for="tburl">このエントリへのトラックバック URL ：</label><br />
+          <input name="tburl" type="text" size="76" readonly="readonly"
+            value="$url$writeback::trackback_path_and_filename.$writeback::trackback_flavour" />
+        </p>
+
+        <h3 class="alltrackbacks">このエントリへのトラックバック一覧</h3>
+        <?$writeback::tb_count lt="1">
+          <p class="center none">　まだこのエントリに対するトラックバックはありません。</p>
+        </?>
+        $writeback::trackbacks
+
+        <a name="comments"></a><h3 class="allcomments">このエントリへのコメント一覧</h3>
+        <?$writeback::cm_count lt="1">
+          <p class="center none">　まだこのエントリに対するコメントはありません。</p>
+        </?>
+        $writeback::comments
+
+        <h3>コメントを書く</h3>
+        <div class="message">$writeback::writeback_response</div>
+
+        <form method="POST" action="$url/$path_info">
+          <label for="name">お名前（必須）：</label><br />
+          <input name="name" size="60" value="$writeback::pref_name" />
+          <br />
+
+          <label for="url">URL もしくはメールアドレス：</label><br />
+          <input name="url" size="60" value="$writeback::pref_url" /><br />
+          ※ URL の場合は http://... から、
+          メールアドレスの場合は mailto:... から記述してください。
+          <br /><br />
+
+          <label for="title">コメントのタイトル：</label><br />
+          <input name="title" size="60" />
+          <br />
+
+          <label for="comment">コメント本文（必須）：</label><br />
+          <textarea name="comment" rows="10" cols="60"></textarea>
+          <br /><br />
+
+          <input type="hidden" name="plugin" value="writeback" />
+          <input type="submit" value="送信" />
+        </form>
+      </div>
+<!-- ここまでが wrietbacksform.general 追加分 -->
