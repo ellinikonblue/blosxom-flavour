@@ -1,0 +1,48 @@
+<!DOCTYPE  html>
+<html lang="ja">
+<head>
+<!-- 各種メタ情報 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>$blog_title$date_title::title$categories::title$entry_title::title</title>
+
+  <link rel="top" href="/" title="Ellinikonblue.net" />
+  <link rel="up"  href="$url/" title="$blog_title" />
+  <?$path_info like="(^[^\.]+/?$)|(^$)|(index\.\w+$)">
+  $paginate_simple::link_prev
+  $paginate_simple::link_next
+  </?>
+  <link rel="alternate" type="application/rss+xml" title="RSS"
+    href="http://yourdomain.com/index.rss10" />
+
+<!-- CSS 読み込み -->
+  <link rel="stylesheet" type="text/css" href="/javascript/lib/bootstrap/css/bootstrap.min.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cabin">
+  <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen,tv" />
+
+<!-- JavaScript 読み込み -->
+<!--[if lt IE 9]
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif] -->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="/javascript/lib/bootstrap/js/bootstrap.js"></script>
+  <script>
+    $(function(){
+      $('a[data-toggle=tooltip]').tooltip();
+    });
+  </script>
+</head>
+
+<body id="pagetop">
+<div id="wrapper" class="container"><div class="row main">
+  <header class="col-md-4 col-lg-4">
+    <h1><a href="$url/" title="$blog_title - Home">$blog_title</a></h1>
+    <div class="description">$blog_description</div>
+  </header> <!-- End of header -->
+
+  <section id="content" class="col-md-8 col-lg-8">
+<!--
+  ***** head フレーバーここまで ****************************************
+  -->
